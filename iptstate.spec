@@ -27,14 +27,16 @@ podobny do top-a.
 %setup -q
 
 %build
-%{__make} CXX=%{__cxx} CXXFLAGS="%{rpmcflags} -fno-exceptions -fno-rtti -I%{_includedir}/ncurses -Wall"
+%{__make} \
+	CXX="%{__cxx}" \
+	CXXFLAGS="%{rpmcflags} -fno-exceptions -fno-rtti -I/usr/include/ncurses -Wall"
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_sbindir},%{_mandir}/man1}
 
 install %{name} $RPM_BUILD_ROOT%{_sbindir}
-install man/man1/*.1 $RPM_BUILD_ROOT%{_mandir}/man1/
+install man/man1/*.1 $RPM_BUILD_ROOT%{_mandir}/man1
 
 %clean
 rm -rf $RPM_BUILD_ROOT
