@@ -1,12 +1,12 @@
 Summary:	IP Tables State - like top
 Summary(pl):	Stan Tablic IP - wy¶wietlaj±cy jak top
 Name:		iptstate
-Version:	1.2.1
+Version:	1.3
 Release:	1
 License:	zlib/libpng license
 Group:		Networking/Utilities
 Source0:	http://iptstate.phildev.net/%{name}-%{version}.tar.gz
-# Source0-md5:	d3a649027e3d11c358aa090ba632fc2b
+# Source0-md5:	0fc7ce5e6803b18c73dcaadb4be2edd0
 URL:		http://iptstate.phildev.net/
 BuildRequires:	libstdc++-devel
 BuildRequires:	ncurses-devel >= 5.0
