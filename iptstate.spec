@@ -6,7 +6,7 @@ Release:	1
 License:	zlib/libpng license
 Group:		Networking/Utilities
 Source0:	http://home.earthlink.net/~jaymzh666/iptstate/%{name}-%{version}.tar.gz
-URL:		http://home.earthlink.net/~jaymzh666/iptstate/
+URL:		http://iptstate.phildev.net
 BuildRequires:	ncurses-devel >= 5.0
 BuildRequires:	libstdc++-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
