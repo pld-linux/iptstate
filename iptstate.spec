@@ -1,7 +1,7 @@
 Summary:	IP Tables State - like top
 Summary(pl):	Stan Tablic IP - wy¶wietlaj±cy jak top
 Name:		iptstate
-Version:	1.2.0
+Version:	1.2.1
 Release:	1
 License:	zlib/libpng license
 Group:		Networking/Utilities
@@ -35,13 +35,11 @@ install -d $RPM_BUILD_ROOT{%{_sbindir},%{_mandir}/man1}
 install %{name} $RPM_BUILD_ROOT%{_sbindir}
 install man/man1/*.1 $RPM_BUILD_ROOT%{_mandir}/man1/
 
-gzip -9nf BUGS CONTRIB README WISHLIST
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc BUGS CONTRIB README WISHLIST
 %attr(755,root,root) %{_sbindir}/*
 %{_mandir}/man?/*
