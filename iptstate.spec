@@ -19,7 +19,7 @@ the states held by your stateful firewall in a top-like manner.
 
 %description -l pl
 Stan Tablic IP (iptstate) oryginalnie zosta³ napisany by
-zaimplementowaæ mo¿liwo¶æ ,,state top'' filtru pakietów IP. ,,state
+zaimplementowaæ mo¿liwo¶æ ,,state top'' filtra pakietów IP. ,,state
 top'' wy¶wietla stany pamiêtane przez Twój stateful firewall w sposób
 podobny do top-a.
 
