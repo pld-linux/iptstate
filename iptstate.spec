@@ -26,7 +26,7 @@ podobny do top-a.
 %setup -q
 
 %build
-%{__make} CXX=%{__cxx} CXXFLAGS="%{rpmcflags} -I%{_includedir}/ncurses -Wall"
+%{__make} CXX=%{__cxx} CXXFLAGS="%{rpmcflags} -fno-exceptions -fno-rtti -I%{_includedir}/ncurses -Wall"
 
 %install
 rm -rf $RPM_BUILD_ROOT
