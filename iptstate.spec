@@ -1,0 +1,47 @@
+Summary:	IP Tables State - like top
+Summary(pl):	Stan Tablic IP - wy¶wietlaj±cy jak top
+Name:		iptstate
+Version:	1.2.0
+Release:	1
+License:	zlib/libpng license
+Group:		Networking/Utilities
+Source0:	http://home.earthlink.net/~jaymzh666/iptstate/%{name}-%{version}.tar.gz
+URL:		http://home.earthlink.net/~jaymzh666/iptstate/
+BuildRequires:	ncurses-devel >= 5.0
+BuildRequires:	libstdc++-devel
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+%description
+IP Tables State (iptstate) was originally written to implement the
+"state top" feature of IP Filter in IP Tables. "State top" displays
+the states held by your stateful firewall in a top-like manner.
+
+%description -l pl
+Stan Tablic IP (iptstate) oryginalnie zosta³ napisany by
+zaimplementowaæ mo¿liwo¶æ ,,state top'' filtru pakietów IP. ,,state
+top'' wy¶wietla stany pamiêtane przez Twój stateful firewall w sposób
+podobny do top-a.
+
+%prep
+%setup -q
+
+%build
+%{__make} CXX=%{__cxx} CXXFLAGS="%{rpmcflags} -I%{_includedir}/ncurses -Wall"
+
+%install
+rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT{%{_sbindir},%{_mandir}/man1}
+
+install %{name} $RPM_BUILD_ROOT%{_sbindir}
+install man/man1/*.1 $RPM_BUILD_ROOT%{_mandir}/man1/
+
+gzip -9nf BUGS CONTRIB README WISHLIST
+
+%clean
+rm -rf $RPM_BUILD_ROOT
+
+%files
+%defattr(644,root,root,755)
+%doc *.gz
+%attr(755,root,root) %{_sbindir}/*
+%{_mandir}/man?/*
