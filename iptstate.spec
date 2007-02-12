@@ -1,5 +1,5 @@
 Summary:	IP Tables State - like top
-Summary(pl):	Stan Tablic IP - wy¶wietlaj±cy jak top
+Summary(pl.UTF-8):   Stan Tablic IP - wyÅ›wietlajÄ…cy jak top
 Name:		iptstate
 Version:	1.3
 Release:	1
@@ -17,10 +17,10 @@ IP Tables State (iptstate) was originally written to implement the
 "state top" feature of IP Filter in IP Tables. "State top" displays
 the states held by your stateful firewall in a top-like manner.
 
-%description -l pl
-Stan Tablic IP (iptstate) oryginalnie zosta³ napisany by
-zaimplementowaæ mo¿liwo¶æ ,,state top'' filtra pakietów IP. ,,state
-top'' wy¶wietla stany pamiêtane przez Twój stateful firewall w sposób
+%description -l pl.UTF-8
+Stan Tablic IP (iptstate) oryginalnie zostaÅ‚ napisany by
+zaimplementowaÄ‡ moÅ¼liwoÅ›Ä‡ ,,state top'' filtra pakietÃ³w IP. ,,state
+top'' wyÅ›wietla stany pamiÄ™tane przez TwÃ³j stateful firewall w sposÃ³b
 podobny do top-a.
 
 %prep
