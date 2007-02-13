@@ -1,5 +1,5 @@
 Summary:	IP Tables State - like top
-Summary(pl.UTF-8):   Stan Tablic IP - wyświetlający jak top
+Summary(pl.UTF-8):	Stan Tablic IP - wyświetlający jak top
 Name:		iptstate
 Version:	1.3
 Release:	1
