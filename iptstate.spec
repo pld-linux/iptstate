@@ -7,6 +7,7 @@ License:	zlib/libpng license
 Group:		Networking/Utilities
 Source0:	http://iptstate.phildev.net/%{name}-%{version}.tar.gz
 # Source0-md5:	0fc7ce5e6803b18c73dcaadb4be2edd0
+Patch0:		%{name}-c++.patch
 URL:		http://iptstate.phildev.net/
 BuildRequires:	libstdc++-devel
 BuildRequires:	ncurses-devel >= 5.0
@@ -25,11 +26,12 @@ podobny do top-a.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__make} \
 	CXX="%{__cxx}" \
-	CXXFLAGS="%{rpmcflags} -fno-exceptions -fno-rtti -I/usr/include/ncurses -Wall"
+	CXXFLAGS="%{rpmcflags} -fno-exceptions -fno-rtti -Wall"
 
 %install
 rm -rf $RPM_BUILD_ROOT
