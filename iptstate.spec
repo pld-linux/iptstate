@@ -1,12 +1,12 @@
 Summary:	IP Tables State - like top
 Summary(pl.UTF-8):	Stan Tablic IP - wyświetlający jak top
 Name:		iptstate
-Version:	2.2.2
+Version:	2.2.3
 Release:	1
 License:	zlib/libpng license
 Group:		Networking/Utilities
 Source0:	http://downloads.sourceforge.net/iptstate/%{name}-%{version}.tar.bz2
-# Source0-md5:	b3f2e89ef38d6e8a85c8ab88a9c514d8
+# Source0-md5:	5238a0c4c4f764a919aba678051698ec
 URL:		http://phildev.net/iptstate/
 BuildRequires:	libnetfilter_conntrack-devel
 BuildRequires:	libstdc++-devel
@@ -31,7 +31,8 @@ podobny do topa.
 %{__make} \
 	CXX="%{__cxx}" \
 	CXXFLAGS="%{rpmcflags} -fno-exceptions -fno-rtti -Wall" \
-	CPPFLAGS="%{rpmcppflags} -I/usr/include/ncurses"
+	CPPFLAGS="%{rpmcppflags} -I/usr/include/ncurses" \
+	LIBS="%{rpmldflags} -lncurses -ltinfo -lnetfilter_conntrack"
 
 %install
 rm -rf $RPM_BUILD_ROOT
