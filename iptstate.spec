@@ -2,7 +2,7 @@ Summary:	IP Tables State - like top
 Summary(pl.UTF-8):	Stan Tablic IP - wyświetlający jak top
 Name:		iptstate
 Version:	2.2.6
-Release:	1
+Release:	2
 License:	Zlib
 Group:		Networking/Utilities
 #Source0Download: https://github.com/jaymzh/iptstate/releases
